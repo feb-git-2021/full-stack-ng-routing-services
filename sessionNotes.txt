@@ -1,0 +1,67 @@
+Angular Routing & Services
+attendance Link
+
+GitHubURL for angular fundamentals : https://github.com/feb-git-2021/full-stack-ng-fundamentals
+
+
+Angular services
+	are not same as webservice or WebApi or rest service
+	Service is a broad category encompassing any value, function, or feature that an app needs. A service is typically a class with a narrow, well-defined purpose. It should do something specific and do it well.
+
+Angular distinguishes components from services to increase modularity and reusability. 
+By separating a component's view-related functionality from other kinds of processing, you can 
+make your component classes lean and efficient.
+
+	Angular builtIn services for making an HTTP or asnchronous call to the data
+		http and this was inside a built module called HttpModule  
+		httpClient and this belongs to HttpClientModule
+	JS - callbacks
+	     promises
+	     async and await
+	Angular popularly uses Observables 
+
+	promises can cannot be cancelled but observables can be
+	promises are eager loaded and observables are lazy loaded
+
+
+
+		Intro to routing in Angular
+		Angular is SPA	
+			<html>
+			</html>
+
+			1. Import a module called as RouterModule
+			2. Configure the routes using forRoot([
+			{ path :'/' component:HomeComponent},
+			{path:'/products, component:ProductListComponent}]) :
+forRoot method should be used to configure the route if your application has only one module
+			3. <router-outlet></router-outlet>
+
+
+//DAY3
+
+RESOLVE
+Handling the state on the same page
+Different ways in passing the service in Providers array
+Interceptor and resolve are almost same except interceptor is a service that implements HttpInterceptor
+
+
+//defining an interceptor
+export class FirstInterceptor implements HttpInterceptor{
+intercept(req:HttpRequest<any>,next:HttpHandler):Observable<HttpInterceptor>{
+	//code
+	}
+
+
+How to connect your interceptor with the application
+providers:[]
+
+
+
+
+			
+
+
+
+
+			
